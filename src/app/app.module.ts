@@ -9,13 +9,16 @@ import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MyChartComponent } from './components/my-chart/my-chart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    MyChartComponent
+    MyChartComponent,
+    
   ],
   imports: [
     BrowserModule,
