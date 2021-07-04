@@ -17,8 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    MyChartComponent,
-    
+    MyChartComponent
   ],
   imports: [
     BrowserModule,
