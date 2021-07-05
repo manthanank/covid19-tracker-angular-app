@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CovidService } from 'src/app/service/covid.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -34,4 +35,5 @@ export class HomeComponent implements OnInit {
       this.death = data[index].Deaths;
     })
   }
+
 }
