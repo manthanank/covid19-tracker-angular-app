@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,12 +12,11 @@ export class AppComponent {
   title = 'Covid19 Tracker Showing in Geo Chart';
    type = 'GeoChart';
    data = [
-      ['India', 40],
-      ['USA', 26],
-      ['China', 12],
-      ['Germany', 8],
-      ['Italy', 6],
-      ['Africa', 7] 
+  ['London', 8136000],
+  ['New York', 8538000],
+  ['Paris', 2244000],
+  ['Berlin', 3470000],
+  ['Kairo', 19500000],
    ];
    options = {
    };
@@ -27,6 +27,6 @@ export class AppComponent {
   }
   ngOnInit()
   {
-    
+
   }
 }

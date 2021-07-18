@@ -16,47 +16,80 @@
   </div>
 </div>
 
+
 <br>
 <br>
 
-<div class="flex-container">
-  <div>
-    <h1>
-      <div class="ui statistic">
-        <div class="label">
-          Confirmed
-        </div>
-        <div class="value">
-          :{{confirmed}}
-        </div>
-      </div>
-    </h1>
-  </div>
 
-  <div>
-    <h1>
-      <div class="ui statistic green statistic">
-        <div class="label">
-          Recovered
-        </div>
-        <div class="value">
-          :{{recovered}}
+<div class="ui four column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <div class="ui statistic">
+          <div class="label">
+            Confirmed
+          </div>
+          <div class="value">
+            {{confirmed}}
+          </div>
         </div>
       </div>
-    </h1>
+      <div class="content">
+        <a class="header">Confirmed Cases</a>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <h1>
-      <div class="ui statistic red statistic">
-        <div class="label">
-          Death
-        </div>
-        <div class="value">
-          :{{death}}
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <div class="ui statistic">
+          <div class="label">
+            Recovered
+          </div>
+          <div class="value">
+            {{recovered}}
+          </div>
         </div>
       </div>
-    </h1>
+      <div class="content">
+        <a class="header">Recovered Cases</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <div class="ui statistic">
+          <div class="label">
+            Death
+          </div>
+          <div class="value">
+            {{death}}
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <a class="header">Deaths</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <div class="ui statistic">
+          <div class="label">
+            Active
+          </div>
+          <div class="value">
+            {{active}}
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <a class="header">Active Cases</a>
+      </div>
+    </div>
   </div>
 </div>
 
+<br>

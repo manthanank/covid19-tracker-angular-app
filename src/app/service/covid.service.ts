@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CovidService {
-  
+
   constructor(private http:HttpClient) { }
   getCountry():Observable<any>
   {

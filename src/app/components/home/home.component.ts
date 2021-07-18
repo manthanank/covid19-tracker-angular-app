@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   confirmed: any
   recovered: any
   death: any
-  
+  active: any
   constructor(private service: CovidService) {
 
   }
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       this.confirmed = data[index].Confirmed;
       this.recovered = data[index].Recovered;
       this.death = data[index].Deaths;
+      this.active = data[index].Active;
     })
   }
-
 }
