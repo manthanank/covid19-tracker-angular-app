@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CovidService } from 'src/app/service/covid.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,9 +14,27 @@ export class HomeComponent implements OnInit {
   recovered: any
   death: any
   active: any
+  chart = {
+    PieChart : "PieChart",
+    ColumnChart : "ColumnChart",
+    height: 500,
+    //options: {
+      //animations: any{
+       // duration: 1000,
+       // easing: 'out',
+     // },
+    //}
+  }
+  PieChart={
+    chartType : 'PieChart'
+  }
+  ColumnChart= {
+    chartType : 'ColumnChart'
+  }
   constructor(private service: CovidService) {
 
   }
+  
   ngOnInit() {
     this.service.getCountry().subscribe(data => {
       //console.log(data);
@@ -36,4 +55,5 @@ export class HomeComponent implements OnInit {
       this.active = data[index].Active;
     })
   }
+  
 }
