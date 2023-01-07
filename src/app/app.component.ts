@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-covid19-tracker-app';
+  title = 'covid19-tracker-angular-app';
 }

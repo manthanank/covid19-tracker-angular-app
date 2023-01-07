@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-covid19-tracker-app'`, () => {
+  it(`should have as title 'covid19-tracker-angular-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-covid19-tracker-app');
+    expect(app.title).toEqual('covid19-tracker-angular-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-covid19-tracker-app app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('covid19-tracker-angular-app app is running!');
   });
 });

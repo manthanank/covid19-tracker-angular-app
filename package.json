@@ -1,5 +1,5 @@
 {
-  "name": "angular-covid19-tracker-app",
+  "name": "covid19-tracker-angular-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
