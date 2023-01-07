@@ -1,0 +1,27 @@
+<div class="container">
+    <select (change)="getCountry($event)">
+        <option value="" hidden></option>
+        <option *ngFor="let c of countries">{{c.Country}}</option>
+    </select>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">{{activeCases}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">{{recoveredCases}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
