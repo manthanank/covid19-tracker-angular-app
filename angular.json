@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "covid19-tracker-angular-app": {
+    "angular-covid19-tracker-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/covid19-tracker-angular-app",
+            "outputPath": "dist/angular-covid19-tracker-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "covid19-tracker-angular-app:build:production"
+              "browserTarget": "angular-covid19-tracker-app:build:production"
             },
             "development": {
-              "browserTarget": "covid19-tracker-angular-app:build:development"
+              "browserTarget": "angular-covid19-tracker-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "covid19-tracker-angular-app:build"
+            "browserTarget": "angular-covid19-tracker-app:build"
           }
         },
         "test": {
