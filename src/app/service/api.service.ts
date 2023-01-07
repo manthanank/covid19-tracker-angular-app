@@ -10,6 +10,10 @@ interface countryData{
     Active: number
 }
 
+interface countries{
+  Country: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,11 +23,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getCountries():Observable<any>{
-    return this.http.get(this.url);
+  getCountries():Observable<countries[]>{
+    return this.http.get<countries[]>(this.url);
   }
 
-  getCountryData(country: any):Observable<countryData> {
-    return this.http.get<countryData>(`https://api.covid19api.com/dayone/country/${country}`, {});
+  getCountryData(country: string):Observable<countryData[]> {
+    return this.http.get<countryData[]>(`https://api.covid19api.com/dayone/country/${country}`, {});
   }
 }

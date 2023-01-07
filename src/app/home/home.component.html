@@ -7,21 +7,43 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="col-sm-3 mb-3 mb-sm-0">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Active Cases</h5>
                     <p class="card-text">{{activeCases}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Recovered Cases</h5>
                     <p class="card-text">{{recoveredCases}}</p>
                 </div>
             </div>
         </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Death Cases</h5>
+                    <p class="card-text">{{deathCases}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Confirmed Cases</h5>
+                    <p class="card-text">{{confirmedCases}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="chart-container">
+        <canvas id="MyChart">{{ chart }}</canvas>
     </div>
 </div>

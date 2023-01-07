@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../service/api.service';
-
+import Chart from 'chart.js/auto';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -12,7 +12,7 @@ import { ApiService } from '../service/api.service';
 export class HomeComponent implements OnInit {
 
   countries: any;
-  country: any;
+
   confirmedCases: any
   recoveredCases: any
   deathCases: any
@@ -25,20 +25,45 @@ export class HomeComponent implements OnInit {
       console.log(data);
       this.countries = data;
     });
+    this.createChart();
   }
 
   getCountry(e:any){
     this.api.getCountryData(e.target.value).subscribe(data => {
-      this.country = data;
-      console.log(this.country);
-      this.activeCases = data.Active;
+      this.activeCases = data[0].Active;
       console.log(this.activeCases);
-      this.confirmedCases = data.Confirmed;
+      this.confirmedCases = data[0].Confirmed;
       console.log(this.confirmedCases);
-      this.recoveredCases = data.Recovered;
+      this.recoveredCases = data[0].Recovered;
       console.log(this.recoveredCases);
-      this.deathCases = data.Deaths;
+      this.deathCases = data[0].Deaths;
       console.log(this.deathCases);
     })
   }
+
+  public chart: any;
+
+  createChart(){
+  
+    this.chart = new Chart("MyChart", {
+      type: 'line', //this denotes tha type of chart
+
+      data: {// values on X-Axis
+        labels: this.countries, 
+	       datasets: [
+          {
+            label: "Countries",
+            data: ['467','576', '572', '79', '92',
+								 '574', '573', '576'],
+            backgroundColor: 'blue'
+          },
+        ]
+      },
+      options: {
+        aspectRatio:2.5
+      }
+      
+    });
+  }
+
 }
